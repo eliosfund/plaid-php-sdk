@@ -62,6 +62,7 @@ A specific Plaid API version can be used by adding a `Plaid-Version` header to t
 ```php
 <?php
 
+use Plaid\Environment;
 use Plaid\Exceptions\PlaidException;
 use Plaid\Http\Requests\Auth\GetRequest;
 use Plaid\Plaid;
@@ -89,6 +90,7 @@ The Plaid PHP SDK throws exceptions when an API error occurs. You can catch thes
 ```php
 <?php
 
+use Plaid\Environment;
 use Plaid\Exceptions\PlaidException;
 use Plaid\Plaid;
 
@@ -120,6 +122,7 @@ The Plaid PHP SDK can send asynchronous requests using a promise-based approach.
 ```php
 <?php
 
+use Plaid\Environment;
 use Plaid\Http\Requests\Auth\GetRequest;
 use Plaid\Plaid;
 use Saloon\Exceptions\Request\RequestException;
