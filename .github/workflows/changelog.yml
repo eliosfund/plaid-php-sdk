@@ -51,4 +51,4 @@ jobs:
           branch: ${{ github.event.release.target_commitish }}
           commit_message: ${{ steps.commit_message.outputs.commit_message }}
           file_pattern: CHANGELOG.md
-          push_options: '--force'
+          push_options: "--force"

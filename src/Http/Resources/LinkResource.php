@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Plaid\Http\Resources;
 
 use Plaid\Http\Requests\Link\AccessTokenInvalidateRequest;
+use Plaid\Http\Requests\Link\PublicTokenCreateRequest;
 use Plaid\Http\Requests\Link\PublicTokenExchangeRequest;
-use Plaid\Http\Requests\Link\TokenCreateRequest;
-use Plaid\Http\Requests\Link\TokenGetRequest;
+use Plaid\Http\Requests\Link\PublicTokenGetRequest;
 use Saloon\Exceptions\Request\FatalRequestException;
 use Saloon\Exceptions\Request\RequestException;
 use Saloon\Http\BaseResource;
@@ -37,17 +37,17 @@ class LinkResource extends BaseResource
      * @throws FatalRequestException
      * @throws RequestException
      */
-    public function tokenCreate(array $data = []): Response
+    public function publicTokenCreate(array $data = []): Response
     {
-        return $this->connector->send(new TokenCreateRequest($data));
+        return $this->connector->send(new PublicTokenCreateRequest($data));
     }
 
     /**
      * @throws FatalRequestException
      * @throws RequestException
      */
-    public function tokenGet(array $data = []): Response
+    public function publicTokenGet(array $data = []): Response
     {
-        return $this->connector->send(new TokenGetRequest($data));
+        return $this->connector->send(new PublicTokenGetRequest($data));
     }
 }

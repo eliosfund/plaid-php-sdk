@@ -3,10 +3,10 @@ name: Test Suite
 on:
   push:
     branches:
-      - 'master'
+      - "master"
   pull_request:
     branches:
-      - '*'
+      - "*"
 
 permissions:
   contents: read
@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [ 8.2, 8.3 ]
+        php: [8.2, 8.3]
 
     name: Run Tests - PHP ${{ matrix.php }}
 

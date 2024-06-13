@@ -3,17 +3,18 @@
 Thank you for your interest in contributing to Plaid PHP SDK! We welcome contributions from the community to help improve and grow this project. Please take a moment to read through the following guidelines to ensure a smooth contribution process.
 
 ## Table of Contents
+
 1. [Getting Started](#getting-started)
-    - [Fork the Repository](#fork-the-repository)
-    - [Clone Your Fork](#clone-your-fork)
-    - [Set Up the Development Environment](#set-up-the-development-environment)
+   - [Fork the Repository](#fork-the-repository)
+   - [Clone Your Fork](#clone-your-fork)
+   - [Set Up the Development Environment](#set-up-the-development-environment)
 2. [Making Changes](#making-changes)
-    - [Branching](#branching)
-    - [Coding Guidelines](#coding-guidelines)
-    - [Testing](#testing)
+   - [Branching](#branching)
+   - [Coding Guidelines](#coding-guidelines)
+   - [Testing](#testing)
 3. [Submitting Changes](#submitting-changes)
-    - [Creating a Pull Request](#creating-a-pull-request)
-    - [Pull Request Checklist](#pull-request-checklist)
+   - [Creating a Pull Request](#creating-a-pull-request)
+   - [Pull Request Checklist](#pull-request-checklist)
 4. [Community and Communication](#community-and-communication)
 5. [License](#license)
 
@@ -68,6 +69,7 @@ Then, navigate to the [original repository](https://github.com/eliosfund/plaid-p
 ### Pull Request Checklist
 
 Before submitting your pull request, please make sure you have done the following:
+
 - [ ] Followed the coding guidelines.
 - [ ] Included relevant tests if applicable.
 - [ ] Written clear and concise commit messages.
@@ -76,4 +78,7 @@ Before submitting your pull request, please make sure you have done the followin
 ## License
 
 By contributing to this project, you agree that your contributions will be licensed under the [project's license](https://github.com/eliosfund/plaid-php-sdk).
+
+```
+
 ```

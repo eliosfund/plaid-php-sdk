@@ -8,6 +8,7 @@ use JsonException;
 use Plaid\Exceptions\PlaidException;
 use Plaid\Http\Resources\AuthResource;
 use Plaid\Http\Resources\LinkResource;
+use Plaid\Http\Resources\TransactionResource;
 use Plaid\Http\Resources\TransferResource;
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Http\Connector;
@@ -30,8 +31,8 @@ class Plaid extends Connector implements HasBody
     public function __construct(
         protected readonly string $clientId,
         protected readonly string $clientSecret,
-        protected readonly string $accessToken,
-        protected readonly string $environment = 'production')
+        protected readonly ?string $accessToken = null,
+        protected readonly Environment $environment = Environment::PRODUCTION)
     {
         //
     }
@@ -46,6 +47,11 @@ class Plaid extends Connector implements HasBody
         return new LinkResource($this);
     }
 
+    public function transactions(): TransactionResource
+    {
+        return new TransactionResource($this);
+    }
+
     public function transfer(): TransferResource
     {
         return new TransferResource($this);
@@ -54,8 +60,8 @@ class Plaid extends Connector implements HasBody
     public function resolveBaseUrl(): string
     {
         return match ($this->environment) {
-            'development' => 'https://development.plaid.com',
-            'staging' => 'https://sandbox.plaid.com',
+            Environment::DEVELOPMENT => 'https://development.plaid.com',
+            Environment::SANDBOX => 'https://sandbox.plaid.com',
             default => 'https://production.plaid.com',
         };
     }
@@ -70,11 +76,16 @@ class Plaid extends Connector implements HasBody
 
     protected function defaultBody(): array
     {
-        return [
+        $body = [
             'client_id' => $this->clientId,
             'secret' => $this->clientSecret,
-            'access_token' => $this->accessToken,
         ];
+
+        if (filled($this->accessToken)) {
+            $body['access_token'] = $this->accessToken;
+        }
+
+        return $body;
     }
 
     protected function defaultHeaders(): array

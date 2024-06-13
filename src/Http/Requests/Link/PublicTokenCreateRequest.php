@@ -9,7 +9,7 @@ use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
-class TokenCreateRequest extends Request implements HasBody
+class PublicTokenCreateRequest extends Request implements HasBody
 {
     use HasJsonBody;
 

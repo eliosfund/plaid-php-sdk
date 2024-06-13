@@ -1,47 +1,51 @@
 {
-    "name": "eliosfund/plaid-php-sdk",
-    "keywords": ["plaid", "sdk", "php"],
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Jon Erickson",
-            "email": "jon.erickson@eliosfund.com"
-        }
-    ],
-    "require": {
-        "php": "^8.2",
-        "saloonphp/saloon": "^3.0",
-        "illuminate/support": "^10.0"
-    },
-    "require-dev": {
-        "pestphp/pest": "^2.34",
-        "phpstan/phpstan": "^1.11",
-        "mockery/mockery": "^1.6",
-        "pestphp/pest-plugin-type-coverage": "^2.8",
-        "laravel/pint": "^1.16"
-    },
-    "autoload": {
-        "psr-4": {
-            "Plaid\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Plaid\\Test\\": "tests"
-        }
-    },
-    "config": {
-        "allow-plugins": {
-            "pestphp/pest-plugin": true
-        }
-    },
-    "scripts": {
-        "lint": "./vendor/bin/pint src",
-        "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --min=100",
-        "test:lint": "./vendor/bin/pint src --test",
-        "test:types": "./vendor/bin/pest --type-coverage --min=100"
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+  "name": "eliosfund/plaid-php-sdk",
+  "keywords": [
+    "plaid",
+    "sdk",
+    "php"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jon Erickson",
+      "email": "jon.erickson@eliosfund.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "saloonphp/saloon": "^3.0",
+    "illuminate/support": "^10.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.34",
+    "phpstan/phpstan": "^1.11",
+    "mockery/mockery": "^1.6",
+    "pestphp/pest-plugin-type-coverage": "^2.8",
+    "laravel/pint": "^1.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Plaid\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Plaid\\Test\\": "tests"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "scripts": {
+    "lint": "./vendor/bin/pint src",
+    "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --min=100",
+    "test:lint": "./vendor/bin/pint src --test",
+    "test:types": "./vendor/bin/pest --type-coverage --min=100"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }

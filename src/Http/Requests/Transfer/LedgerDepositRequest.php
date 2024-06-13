@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Plaid\Http\Requests\Link;
+namespace Plaid\Http\Requests\Transfer;
 
 use Saloon\Contracts\Body\HasBody;
 use Saloon\Enums\Method;
 use Saloon\Http\Request;
 use Saloon\Traits\Body\HasJsonBody;
 
-class TokenGetRequest extends Request implements HasBody
+class LedgerDepositRequest extends Request implements HasBody
 {
     use HasJsonBody;
 
@@ -22,7 +22,7 @@ class TokenGetRequest extends Request implements HasBody
 
     public function resolveEndpoint(): string
     {
-        return '/link/token/get';
+        return '/transfer/ledger/deposit';
     }
 
     protected function defaultBody(): array
