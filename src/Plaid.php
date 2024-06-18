@@ -8,6 +8,7 @@ use JsonException;
 use Plaid\Exceptions\PlaidException;
 use Plaid\Http\Resources\AuthResource;
 use Plaid\Http\Resources\LinkResource;
+use Plaid\Http\Resources\SandboxResource;
 use Plaid\Http\Resources\TransactionResource;
 use Plaid\Http\Resources\TransferResource;
 use Saloon\Contracts\Body\HasBody;
@@ -45,6 +46,11 @@ class Plaid extends Connector implements HasBody
     public function link(): LinkResource
     {
         return new LinkResource($this);
+    }
+
+    public function sandbox(): SandboxResource
+    {
+        return new SandboxResource($this);
     }
 
     public function transactions(): TransactionResource
