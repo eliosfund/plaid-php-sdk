@@ -1,5 +1,11 @@
 # Plaid PHP SDK
 
+[![Test Suite](https://github.com/eliosfund/plaid-php-sdk/actions/workflows/tests.yml/badge.svg)](https://github.com/eliosfund/plaid-php-sdk/actions/workflows/tests.yml)
+![Downloads](https://img.shields.io/packagist/dm/eliosfund/plaid-php-sdk)
+![Packagist Version](https://img.shields.io/packagist/v/eliosfund/plaid-php-sdk)
+![GitHub License](https://img.shields.io/github/license/eliosfund/plaid-php-sdk)
+[![codecov](https://codecov.io/gh/eliosfund/plaid-php-sdk/graph/badge.svg?token=4L6n4NLODB)](https://codecov.io/gh/eliosfund/plaid-php-sdk)
+
 A PHP package to help kickstart your next [Plaid](https://plaid.com) integration.
 
 ## Introduction
