@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 use Plaid\Environment;
 use Plaid\Plaid;
-use Saloon\Http\Faking\MockResponse;
 
 test('it will resolve the default base url', function () {
     $connection = new Plaid('foo', 'bar', 'foobar');
