@@ -1,5 +1,6 @@
 <?php
 
+use Plaid\Environment;
 use Plaid\Plaid;
 use Saloon\Http\Faking\MockResponse;
 
@@ -10,13 +11,13 @@ test('it will resolve the default base url', function () {
 });
 
 test('it will resolve the sandbox url', function () {
-    $connection = new Plaid('foo', 'bar', 'foobar', 'staging');
+    $connection = new Plaid('foo', 'bar', 'foobar', Environment::SANDBOX);
 
     expect($connection->resolveBaseUrl())->toEqual('https://sandbox.plaid.com');
 });
 
 test('it will resolve the development url', function () {
-    $connection = new Plaid('foo', 'bar', 'foobar', 'development');
+    $connection = new Plaid('foo', 'bar', 'foobar', Environment::DEVELOPMENT);
 
     expect($connection->resolveBaseUrl())->toEqual('https://development.plaid.com');
 });

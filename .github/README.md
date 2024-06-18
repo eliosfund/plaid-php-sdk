@@ -37,7 +37,7 @@ use Plaid\Plaid;
 $plaid = new Plaid(
     clientId: env('PLAID_CLIENT_ID'),
     clientSecret: env('PLAID_SECRET'),
-    environment: Environment::SANDBOX)
+    environment: Environment::SANDBOX
 );
 
 // Request a public link token
@@ -72,7 +72,7 @@ $plaid = new Plaid(
     clientId: env('PLAID_CLIENT_ID'),
     clientSecret: env('PLAID_SECRET'),
     accessToken: $accessToken,
-    environment: Environment::SANDBOX)
+    environment: Environment::SANDBOX
 );
 
 // Create a request
@@ -98,8 +98,7 @@ use Plaid\Plaid;
 $plaid = new Plaid(
     clientId: env('PLAID_CLIENT_ID'),
     clientSecret: env('PLAID_SECRET'),
-    accessToken: $accessToken,
-    environment: Environment::SANDBOX)
+    environment: Environment::SANDBOX
 );
 
 // Perform a request
@@ -109,9 +108,9 @@ try {
         'end_date' => '2021-01-31'
     ])->get()->json();
 } catch (PlaidException $exception) {
-    // Handle the exception
+    // Handle API exceptions
 } catch (Exception $e) {
-    // Handle other exceptions
+    // Handle PHP exceptions
 }
 ```
 
@@ -133,7 +132,7 @@ $plaid = new Plaid(
     clientId: env('PLAID_CLIENT_ID'),
     clientSecret: env('PLAID_SECRET'),
     accessToken: $accessToken,
-    environment: Environment::SANDBOX)
+    environment: Environment::SANDBOX
 );
 
 // Create a promise
