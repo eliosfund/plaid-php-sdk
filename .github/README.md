@@ -157,6 +157,7 @@ Currently, the following Plaid products are supported:
 
 - Auth
 - Link
+- Sandbox
 - Transactions
 - Transfer
 
