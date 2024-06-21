@@ -12,6 +12,7 @@ use Plaid\Http\Requests\Transfer\CreateRequest;
 use Plaid\Http\Requests\Transfer\EventListRequest;
 use Plaid\Http\Requests\Transfer\EventSyncRequest;
 use Plaid\Http\Requests\Transfer\GetRequest;
+use Plaid\Http\Requests\Transfer\IntentCreateRequest;
 use Plaid\Http\Requests\Transfer\LedgerDepositRequest;
 use Plaid\Http\Requests\Transfer\LedgerDistributeRequest;
 use Plaid\Http\Requests\Transfer\LedgerGetRequest;
@@ -96,6 +97,15 @@ class TransferResource extends BaseResource
     public function get(array $data = []): Response
     {
         return $this->connector->send(new GetRequest($data));
+    }
+
+    /**
+     * @throws FatalRequestException
+     * @throws RequestException
+     */
+    public function intentCreate(array $data = []): Response
+    {
+        return $this->connector->send(new IntentCreateRequest($data));
     }
 
     /**
