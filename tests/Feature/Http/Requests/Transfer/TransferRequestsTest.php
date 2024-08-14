@@ -40,6 +40,9 @@ beforeEach(function () {
         Transfer\IntentCreateRequest::class => MockResponse::make([
             'data' => 'foo',
         ]),
+        Transfer\IntentGetRequest::class => MockResponse::make([
+            'data' => 'foo',
+        ]),
         Transfer\LedgerDepositRequest::class => MockResponse::make([
             'data' => 'foo',
         ]),
@@ -191,6 +194,20 @@ test('it can create a transfer intent', function () {
         ]);
 
     $this->mockClient->assertSent(Transfer\IntentCreateRequest::class);
+});
+
+test('it can get a transfer intent', function () {
+    $response = $this->connector->transfer()->intentGet();
+
+    $data = $response->json();
+
+    expect($response->status())->toEqual(200)
+        ->and($response)->toBeInstanceOf(Response::class)
+        ->and($data)->toEqual([
+            'data' => 'foo',
+        ]);
+
+    $this->mockClient->assertSent(Transfer\IntentGetRequest::class);
 });
 
 test('it can deposit into the ledger', function () {
