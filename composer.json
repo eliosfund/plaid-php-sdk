@@ -46,6 +46,6 @@
     "test:lint": "./vendor/bin/pint src --test",
     "test:types": "./vendor/bin/pest --type-coverage --min=100"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "beta",
   "prefer-stable": true
 }

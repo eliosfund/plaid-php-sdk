@@ -162,6 +162,7 @@ $promise->wait();
 Currently, the following Plaid products are supported:
 
 - Auth
+- Identity
 - Link
 - Sandbox
 - Transactions
