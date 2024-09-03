@@ -7,6 +7,7 @@ namespace Plaid;
 use JsonException;
 use Plaid\Exceptions\PlaidException;
 use Plaid\Http\Resources\AuthResource;
+use Plaid\Http\Resources\IdentityResource;
 use Plaid\Http\Resources\LinkResource;
 use Plaid\Http\Resources\SandboxResource;
 use Plaid\Http\Resources\TransactionResource;
@@ -41,6 +42,11 @@ class Plaid extends Connector implements HasBody
     public function auth(): AuthResource
     {
         return new AuthResource($this);
+    }
+
+    public function identity(): IdentityResource
+    {
+        return new IdentityResource($this);
     }
 
     public function link(): LinkResource
