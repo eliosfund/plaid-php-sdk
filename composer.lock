@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71dda3637a7fc99930cb9034257b69a6",
+    "content-hash": "3603b6df16d303f71a50698386134784",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -3362,16 +3362,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.11.3",
+            "version": "1.12.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "e64220a05c1209fc856d58e789c3b7a32c0bb9a5"
+                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e64220a05c1209fc856d58e789c3b7a32c0bb9a5",
-                "reference": "e64220a05c1209fc856d58e789c3b7a32c0bb9a5",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
+                "reference": "dc2b9976bd8b0f84ec9b0e50cc35378551de7af0",
                 "shasum": ""
             },
             "require": {
@@ -3416,7 +3416,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-05-31T13:53:37+00:00"
+            "time": "2024-10-18T11:12:07+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -5658,7 +5658,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
