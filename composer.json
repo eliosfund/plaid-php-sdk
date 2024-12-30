@@ -15,15 +15,16 @@
   ],
   "require": {
     "php": "^8.2",
-    "saloonphp/saloon": "^3.0",
-    "illuminate/support": "^11.32"
+    "saloonphp/saloon": "^3.10.1",
+    "illuminate/support": "^10.0 || ^11.0"
   },
   "require-dev": {
-    "pestphp/pest": "^2.34",
-    "phpstan/phpstan": "^1.11",
-    "mockery/mockery": "^1.6",
-    "pestphp/pest-plugin-type-coverage": "^2.8",
-    "laravel/pint": "^1.16"
+    "pestphp/pest": "^2.36",
+    "phpstan/phpstan": "^1.12.13",
+    "mockery/mockery": "^1.6.12",
+    "pestphp/pest-plugin-type-coverage": "^2.8.7",
+    "laravel/pint": "^1.19",
+    "pestphp/pest-plugin-arch": "^2.7"
   },
   "autoload": {
     "psr-4": {
@@ -46,6 +47,6 @@
     "test:lint": "./vendor/bin/pint src --test",
     "test:types": "./vendor/bin/pest --type-coverage --min=100"
   },
-  "minimum-stability": "beta",
+  "minimum-stability": "stable",
   "prefer-stable": true
 }
