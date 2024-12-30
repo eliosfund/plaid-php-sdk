@@ -1,18 +1,24 @@
 {
   "name": "eliosfund/plaid-php-sdk",
+  "description": "Plaid SDK for Laravel and PHP.",
   "keywords": [
     "plaid",
     "sdk",
-    "php"
+    "php",
+    "laravel"
   ],
-  "type": "project",
   "license": "MIT",
+  "support": {
+    "issues": "https://github.com/eliosfund/plaid-php-sdk/issues",
+    "source": "https://github.com/eliosfund/plaid-php-sdk"
+  },
   "authors": [
     {
       "name": "Jon Erickson",
-      "email": "jon.erickson@eliosfund.com"
+      "email": "jon.erickson@bkjgconsulting.com"
     }
   ],
+  "homepage": "https://github.com/eliosfund/plaid-php-sdk",
   "require": {
     "php": "^8.2",
     "saloonphp/saloon": "^3.10.1",
@@ -37,6 +43,7 @@
     }
   },
   "config": {
+    "sort-packages": true,
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
