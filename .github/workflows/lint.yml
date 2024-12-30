@@ -19,7 +19,7 @@ jobs:
           coverage: none
 
       - name: Install Composer Dependencies
-        run: composer install --no-interaction --no-progress --prefer-dist --prefer-stable
+        run: composer install --no-interaction --no-progress --prefer-dist
 
       - name: Run Linter
         run: composer run test:lint
