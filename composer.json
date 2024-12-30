@@ -1,22 +1,28 @@
 {
   "name": "eliosfund/plaid-php-sdk",
+  "description": "Plaid SDK for Laravel and PHP.",
   "keywords": [
     "plaid",
     "sdk",
-    "php"
+    "php",
+    "laravel"
   ],
-  "type": "project",
   "license": "MIT",
+  "support": {
+    "issues": "https://github.com/eliosfund/plaid-php-sdk/issues",
+    "source": "https://github.com/eliosfund/plaid-php-sdk"
+  },
   "authors": [
     {
       "name": "Jon Erickson",
-      "email": "jon.erickson@eliosfund.com"
+      "email": "jon.erickson@bkjgconsulting.com"
     }
   ],
+  "homepage": "https://github.com/eliosfund/plaid-php-sdk",
   "require": {
     "php": "^8.2",
     "saloonphp/saloon": "^3.10.1",
-    "illuminate/support": "^10.0 || ^11.0"
+    "illuminate/support": "^10.0|^11.0"
   },
   "require-dev": {
     "pestphp/pest": "^2.36",
@@ -37,13 +43,14 @@
     }
   },
   "config": {
+    "sort-packages": true,
     "allow-plugins": {
       "pestphp/pest-plugin": true
     }
   },
   "scripts": {
     "lint": "./vendor/bin/pint src",
-    "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --min=100",
+    "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --min=100 --coverage-clover ./coverage.xml",
     "test:lint": "./vendor/bin/pint src --test",
     "test:types": "./vendor/bin/pest --type-coverage --min=100"
   },
