@@ -43,7 +43,7 @@
   },
   "scripts": {
     "lint": "./vendor/bin/pint src",
-    "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --min=100",
+    "test": "XDEBUG_MODE=coverage ./vendor/bin/pest --coverage --min=100 --coverage-clover ./coverage.xml",
     "test:lint": "./vendor/bin/pint src --test",
     "test:types": "./vendor/bin/pest --type-coverage --min=100"
   },

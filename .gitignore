@@ -2,4 +2,5 @@
 vendor
 build
 clover.xml
+coverage.xml
 .phpactor.json
