@@ -4,3 +4,4 @@ build
 clover.xml
 coverage.xml
 .phpactor.json
+composer.lock
